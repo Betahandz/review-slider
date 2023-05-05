@@ -1,13 +1,203 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: pro;
+  src: url(./fonts/KrinkesRegularPERSONAL.ttf);
+}
+@font-face {
+  font-family: lite;
+  src: url(./fonts/Sausage.ttf);
+}
+@property --color1 {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: red;
+}
+@property --color2 {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: blue;
+}
+:root {
+  /* color */
+  --red: #e02401;
+  --lorange: #f78812;
+  --dorange: #ab6d23;
+  --brown: #51050f;
+  --black: #210004;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  resize: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+}
+
+#root {
+  height: 100vh;
+  background-color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  overflow: hidden;
+  position: relative;
+}
+#root .box {
+  width: 10vw;
+  height: 10vw;
+  background-color: var(--brown);
+  border-radius: 20px;
+  transition: 5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#root .box:hover {
+  background-color: var(--lorange);
+  transition: 0.4s;
+}
+#root .box:hover img {
+  filter: grayscale(0) sepia(0);
+  opacity: 1;
+}
+#root .box img {
+  width: 80%;
+  transition: 0.3s;
+  opacity: 0.2;
+  filter: grayscale(100%) sepia(100%);
+}
+
+@media screen and (max-width: 570px) {
+  #root {
+    gap: 5px;
+  }
+  #root .box {
+    width: 15vw;
+  }
+}
+.review {
+  width: 90%;
+  max-width: 700px;
+  min-height: 200px;
+  position: absolute;
+  background-color: var(--black);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+}
+.review .r-wrap {
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.review .r-wrap svg {
+  color: var(--lorange);
+  font-size: 40px;
+  cursor: pointer;
+}
+.review .r-wrap svg:hover {
+  transform: scale(0.85);
+}
+.review .r-wrap .show {
+  min-height: 400px;
+  width: 80%;
+  overflow: hidden;
+  position: relative;
+}
+.review .r-wrap .show .personnel {
+  width: 100%;
+  min-height: 200px;
+  background-color: var(--black);
+  padding: 20px;
+  text-align: center;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.8s;
+}
+.review .r-wrap .show .personnel .img {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  isolation: isolate;
+  border-radius: 50%;
+  margin: auto;
+}
+.review .r-wrap .show .personnel .img::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: absolute;
+  top: -4px;
+  z-index: -1;
+  left: 10px;
+  background-color: var(--red);
+}
+.review .r-wrap .show .personnel .img img {
+  width: 100%;
+  height: 100%;
+}
+.review .r-wrap .show .personnel .naming {
+  color: var(--red);
+  font-family: pro;
+  font-size: 70px;
+  padding: none;
+}
+.review .r-wrap .show .personnel .job {
+  color: var(--lorange);
+  font-family: lite;
+  font-size: 20px;
+}
+.review .r-wrap .show .personnel .quote {
+  color: var(--dorange);
+  font-family: lite;
+  font-size: 20px;
+}
+.review .r-wrap .show .activeSlide {
+  transform: translate(0);
+  z-index: 2;
+  opacity: 1;
+}
+.review .r-wrap .show .lastSlide {
+  transform: translate(-100%);
+}
+.review .r-wrap .show .nextSlide {
+  transform: translate(100%);
+}
+@media screen and (max-width: 590px) {
+  .review .r-wrap .show {
+    min-height: 450px;
+  }
+  .review .r-wrap .show .personnel {
+    padding: unset;
+  }
+  .review .r-wrap .show .personnel .naming {
+    font-size: 40px;
+  }
+}
+.review .surprise {
+  padding: 0 25px;
+  display: block;
+  margin: 5px auto;
+  border: none;
+  outline: none;
+  background-color: var(--black);
+  color: var(--lorange);
+  cursor: pointer;
+  border-radius: 20px;
+  font-family: lite;
+  font-size: 20px;
 }
