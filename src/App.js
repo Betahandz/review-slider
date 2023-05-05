@@ -33,7 +33,7 @@ const App = () => {
         if(personIndex === index) {
             position = "activeSlide personnel";
         }
-        if(personIndex === (index - 1) || ((index === 0 && personIndex === (person.length)))) {
+        if(personIndex === index -1 || (index === 0 && personIndex === persons.length - 1)) {
             position = "lastSlide personnel";
         }
        return(
