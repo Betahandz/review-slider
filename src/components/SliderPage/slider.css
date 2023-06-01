@@ -1,0 +1,147 @@
+.review {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: rgb(29, 28, 28);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.review .customer {
+  position: absolute;
+  width: 30%;
+  min-height: 200px;
+  border: none;
+  border-radius: 10px;
+  transition: 0.3s;
+  overflow: hidden;
+}
+.review .customer.next {
+  transform: translate(100%);
+  opacity: 0;
+}
+.review .customer.next legend {
+  transform: translateY(-120px);
+}
+.review .customer.next .name {
+  transform: translate(100px);
+}
+.review .customer.next em {
+  transform: translate(1000px);
+}
+.review .customer.prev {
+  transform: translate(-100%);
+  opacity: 0;
+}
+.review .customer.prev legend {
+  transform: translateY(-120px);
+}
+.review .customer.prev .name {
+  transform: translate(-100px);
+}
+.review .customer.prev em {
+  transform: translate(-1000px);
+}
+.review .customer legend {
+  width: 100px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+.review .customer legend img {
+  width: 100%;
+}
+.review .customer .name {
+  font-family: lite;
+  text-align: center;
+  color: var(--lorange);
+  transition: 0.3s 0.2s;
+}
+.review .customer em {
+  display: block;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  color: white;
+  transition: 0.3s 0.2s;
+}
+.review .customer q {
+  font-family: lite;
+  font-size: 20px;
+  text-align: center;
+  display: block;
+  color: rgb(206, 202, 202);
+}
+.review button {
+  transform: translateY(200px);
+}
+
+@media screen and (max-width: 450px) {
+  .review .customer {
+    position: absolute;
+    width: 100%;
+    padding: 0 12px;
+    min-height: 200px;
+    border: none;
+    border-radius: 10px;
+    transition: 0.3s;
+    overflow: hidden;
+  }
+  .review .customer.next {
+    transform: translate(100%);
+    opacity: 0;
+  }
+  .review .customer.next legend {
+    transform: translateY(-120px);
+  }
+  .review .customer.next .name {
+    transform: translate(100px);
+  }
+  .review .customer.next em {
+    transform: translate(1000px);
+  }
+  .review .customer.prev {
+    transform: translate(-100%);
+    opacity: 0;
+  }
+  .review .customer.prev legend {
+    transform: translateY(-120px);
+  }
+  .review .customer.prev .name {
+    transform: translate(-100px);
+  }
+  .review .customer.prev em {
+    transform: translate(-1000px);
+  }
+  .review .customer legend {
+    width: 100px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    transition: 0.3s;
+  }
+  .review .customer legend img {
+    width: 100%;
+  }
+  .review .customer .name {
+    font-family: lite;
+    text-align: center;
+    color: var(--lorange);
+    transition: 0.3s 0.2s;
+  }
+  .review .customer em {
+    display: block;
+    text-align: center;
+    font-family: "Courier New", Courier, monospace;
+    color: white;
+    transition: 0.3s 0.2s;
+  }
+  .review .customer q {
+    font-family: lite;
+    font-size: 20px;
+    text-align: center;
+    display: block;
+    color: rgb(206, 202, 202);
+  }
+  .review button {
+    transform: translateY(200px);
+  }
+}

@@ -1,0 +1,42 @@
+.landing {
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  position: relative;
+}
+.landing div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.landing div:first-child {
+  background-color: black;
+  clip-path: inset(0 50% 0 0);
+}
+.landing div:first-child .title {
+  color: white;
+}
+.landing div:last-child {
+  background-color: white;
+  clip-path: inset(0 0 0 50%);
+}
+.landing div:last-child .title {
+  color: transparent;
+  -webkit-text-stroke: 2px black;
+}
+.landing div .title {
+  font-size: 10rem;
+  font-family: lite;
+}
+
+@media screen and (max-width: 450px) {
+  .landing .title {
+    font-size: 16px;
+    font-family: lite;
+  }
+}
