@@ -2,7 +2,7 @@ import './landing.css';
 
 const Landing = () => {
     return(
-        <section className="landing">
+        <section className="landing panel">
             <div className='dark'>
                 <marquee>
                 <h1 className='title'>Slider Review</h1>

@@ -37,7 +37,7 @@ const SliderPage = () => {
     }
 
     return (
-        <section className="review">
+        <section className="review panel">
             {
                 Data.map((data, dataIndex) => {
                     let position = "next";
