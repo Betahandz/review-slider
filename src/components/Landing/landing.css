@@ -19,7 +19,7 @@
   clip-path: inset(0 50% 0 0);
 }
 .landing div:first-child .title {
-  color: white;
+  color: red;
 }
 .landing div:last-child {
   background-color: white;
@@ -27,7 +27,7 @@
 }
 .landing div:last-child .title {
   color: transparent;
-  -webkit-text-stroke: 2px black;
+  -webkit-text-stroke: 2px blue;
 }
 .landing div .title {
   font-size: 10rem;
